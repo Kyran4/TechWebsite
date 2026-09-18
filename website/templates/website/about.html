@@ -1,0 +1,63 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div id="cart-window" class="cart-window">
+    <span class="close-cart">&times;</span>
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button id="checkout-button">Checkout</button>
+</div>
+
+<section class="about-intro">
+    <h1>About Tech Haven</h1>
+    <p>Your destination for cutting-edge technology and premium accessories.</p>
+</section>
+
+<section class="brand-story">
+    <h2>Our Story</h2>
+    <article>
+        <p>Founded in 2025, Tech Haven was created to provide high-quality tech solutions that enhance productivity and elevate entertainment experiences. From premium laptops to smart home devices, our goal is to bring innovation to your fingertips.</p>
+    </article>
+</section>
+
+<section class="values">
+    <h2>Our Core Values</h2>
+    <ul>
+        <li>🌎 Innovation - Bringing the latest advancements in technology.</li>
+        <li>🔒 Reliability - Trusted products that meet industry standards.</li>
+        <li>✨ User Experience - Thoughtfully designed for efficiency and ease.</li>
+    </ul>
+</section>
+
+<section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+        <div class="member">
+            <h3>Kyran Hannah</h3>
+            <p>Founder & CEO</p>
+        </div>
+        <div class="member">
+            <h3>Sean Crump</h3>
+            <p>Lead UX/UI Designer</p>
+        </div>
+        <div class="member">
+            <h3>Cleetus McFarland</h3>
+            <p>Chief Engineer</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'website/js/cart.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Edit Account{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/css/account.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Edit Account</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="id_username">Username</label>
+        <input type="text" id="id_username" name="username" value="{{ user.username }}" required>
+
+        <button type="submit" class="primary-btn">Save Username</button>
+    </form>
+
+    <div class="divider"></div>
+
+    <a href="{% url 'password_change' %}" class="secondary-link">
+        Change / Reset Password
+    </a>
+</div>
+{% endblock %}

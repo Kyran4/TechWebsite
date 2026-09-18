@@ -1,0 +1,65 @@
+.form-container {
+    max-width: 450px;
+    margin: 60px auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00ffcc;
+    border: none;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background: #008f99;
+}
+
+.divider {
+    height: 1px;
+    background: #333;
+    margin: 25px 0;
+}
+
+.secondary-link {
+    display: block;
+    text-align: center;
+    color: #00ffcc;
+    text-decoration: underline;
+    font-size: 15px;
+}

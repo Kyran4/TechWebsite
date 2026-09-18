@@ -1,0 +1,172 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Shop{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/css/shop.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="shop-header">
+    <h3>Upgrade your setup with high-performance gadgets and accessories.</h3>
+</section>
+
+<div id="sale-popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Limited Time Sale!</h2>
+        <p>Get <strong>50% off</strong> on the <strong>Ultra HD 4K Monitor</strong>.</p>
+        <img src="{% static 'website/media/monitor.jpg' %}" alt="Ultra HD 4K Monitor">
+        <p class="price">Price: <strong>$479.99 (50% off)</strong></p>
+        {% if user.is_authenticated %}
+            <a href="{% url 'sale_item' %}" class="popup-button">Shop Now</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+</div>
+
+<section class="product-grid">
+
+    <div class="product">
+        <img src="{% static 'website/media/laptop.jpg' %}" alt="Precision Laptop">
+        <p>Ultra Performance Laptop</p>
+        <p>$1,499.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Ultra Performance Laptop" data-price="1499.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/headset.jpg' %}" alt="Noise Cancelling Headphones">
+        <p>Noise Cancelling Headphones</p>
+        <p>$279.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Noise Cancelling Headphones" data-price="279.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/watch.jpg' %}" alt="Smart Fitness Watch">
+        <p>Smart Fitness Watch</p>
+        <p>$199.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Smart Fitness Watch" data-price="199.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/mouse.jpg' %}" alt="Gaming Mouse">
+        <p>Gaming Mouse</p>
+        <p>$59.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Gaming Mouse" data-price="59.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/keyboard.jpg' %}" alt="Mechanical Keyboard">
+        <p>Mechanical Keyboard</p>
+        <p>$129.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Mechanical Keyboard" data-price="129.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/speaker.jpg' %}" alt="Smart Speaker">
+        <p>Smart Speaker</p>
+        <p>$89.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Smart Speaker" data-price="89.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/vr.jpg' %}" alt="Virtual Reality Headset">
+        <p>Virtual Reality Headset</p>
+        <p>$479.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Virtual Reality Headset" data-price="479.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/monitor.jpg' %}" alt="Ultra HD 4K Monitor">
+        <p>Ultra HD 4K Monitor</p>
+        <p>$479.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Ultra HD 4K Monitor" data-price="479.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/ssd.jpg' %}" alt="High-Speed USB Drive">
+        <p>High-Speed USB Drive</p>
+        <p>$29.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="High-Speed USB Drive" data-price="29.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/light-bar.jpg' %}" alt="Smart Light Bar">
+        <p>Smart Light Bar</p>
+        <p>$49.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Smart Light Bar" data-price="49.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>        
+        {% endif %}
+    </div>
+
+    <div class="product">
+        <img src="{% static 'website/media/charger.jpg' %}" alt="Fast Wireless Charger">
+        <p>Fast Wireless Charger</p>
+        <p>$79.99</p>
+
+        {% if user.is_authenticated %}
+            <button class="add-to-cart" data-name="Fast Wireless Charger" data-price="79.99">Add to Cart</button>
+        {% else %}
+            <a href="{% url 'login' %}" class="login-required-btn">Log in to Shop</a>
+        {% endif %}
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'website/js/shop.js' %}"></script>
+<script src="{% static 'website/js/cart.js' %}"></script>
+{% endblock %}

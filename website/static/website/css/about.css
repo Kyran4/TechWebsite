@@ -1,0 +1,209 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensures the title is centered */
+    padding: 5px;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    z-index: 9999; /* Ensures it stays above other elements */
+    padding: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+}
+
+body {
+    padding-top: 140px; /* Prevents content from overlapping the fixed header */
+}
+
+.logo {
+    position: absolute;
+    left: 15px; /* Ensures the logo stays on the left */
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    padding-top: 60px;
+}
+
+.site-title {
+    font-size: 40px;
+    color: #00ffcc;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #242424;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 35px;
+}
+
+nav ul li a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #008f99;
+}
+
+.about-intro {
+    padding: 50px;
+    background: #1a1a1a;
+}
+
+.brand-story {
+    padding: 40px;
+    background: #1f1f1f;
+    border-radius: 8px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.member {
+    background: #242424;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+footer {
+    background: #242424;
+    color: white;
+    padding: 15px;
+}
+
+footer a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+.social-links img {
+    width: 40px; /* Adjust icon size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Cart Icon and Window */
+.cart-icon {
+    position: fixed;
+    top: 38px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #00ffcc;
+    color: #121212;
+    padding: 10px;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.cart-window {
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px #00ffcc;
+    z-index: 9999;
+}
+
+.cart-window ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-window button {
+    background: #00ffcc;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-item {
+    background: #ff3333;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #00ffcc;
+    cursor: pointer;
+}

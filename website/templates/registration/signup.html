@@ -1,0 +1,28 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="account-container">
+    <h2>Create Account</h2>
+
+    <form method="post" class="account-form">
+        {% csrf_token %}
+
+        <label for="{{ form.username.id_for_label }}">Username</label>
+        {{ form.username }}
+
+        <label for="{{ form.password1.id_for_label }}">Password</label>
+        {{ form.password1 }}
+
+        <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+        {{ form.password2 }}
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p style="margin-top: 15px; text-align: center;">
+        Already have an account?
+        <a href="{% url 'login' %}" style="color:#00ffcc;">Log In</a>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,253 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensures the title is centered */
+    padding: 5px;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    z-index: 9999; /* Ensures it stays above other elements */
+    padding: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+}
+
+body {
+    padding-top: 140px; /* Prevents content from overlapping the fixed header */
+}
+
+.logo {
+    position: absolute;
+    left: 15px; /* Ensures the logo stays on the left */
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    padding-top: 60px;
+}
+
+.site-title {
+    font-size: 40px;
+    color: #00ffcc;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #242424;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 35px;
+}
+
+nav ul li a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #008f99;
+}
+
+.checkout-header {
+    padding: 50px;
+    background: #1a1a1a;
+}
+
+.checkout-cart {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #1f1f1f;
+    border-radius: 10px;
+}
+
+.checkout-cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.billing-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #242424;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00ffcc;
+    color: #121212;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #008f99;
+}
+
+.checkout-cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.checkout-cart li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+#checkout-cart img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+#checkout-items img {
+    max-width: 150px;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+#checkout-items img,
+.checkout-item img,
+.checkout-cart img,
+.item img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.checkout-cart ul img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background: #242424;
+    color: white;
+    padding: 15px;
+}
+
+footer a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+.social-links img {
+    width: 40px; /* Adjust icon size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.checkout-cart ul img {
+    width: 120px !important;
+    height: auto !important;
+    max-height: 120px !important;
+    object-fit: contain !important;
+    border-radius: 5px;
+}
+
+#checkout-items > li img {
+    width: 120px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0;
+}
+
+#checkout-items > li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+#checkout-items li.flex {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+#checkout-items li.flex img {
+    width: 120px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0;
+}
+
+.checkout-cart img[alt="Ultra HD 4K Monitor"] {
+    width: 120px !important;
+    height: auto !important;
+    margin: 0 !important;
+    display: inline-block !important;
+    object-fit: contain !important;
+}
